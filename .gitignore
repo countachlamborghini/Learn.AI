@@ -1,0 +1,44 @@
+# General
+.DS_Store
+*.log
+*.env
+.env
+.env.*
+node_modules/
+dist/
+build/
+coverage/
+.cache/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# FastAPI local data
+data/
+
+# Next.js
+.next/
+out/
+
+# Flutter/Dart (if generated locally)
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+pubspec.lock
+android/.gradle/
+android/build/
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/
+web/.dart_tool/
+
+# IDE
+.vscode/
+.idea/
