@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fafafa;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Loading animations */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+}
+
+.btn-secondary {
+  @apply bg-secondary-100 hover:bg-secondary-200 text-secondary-700 font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2;
+}
+
+.btn-outline {
+  @apply border border-primary-300 hover:border-primary-400 text-primary-700 hover:text-primary-800 font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-lg shadow-sm border border-secondary-200 p-6;
+}
+
+.card-hover {
+  @apply hover:shadow-md hover:border-secondary-300 transition-all duration-200;
+}
+
+/* Input styles */
+.input {
+  @apply w-full px-3 py-2 border border-secondary-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200;
+}
+
+.input-error {
+  @apply border-error-500 focus:ring-error-500;
+}
+
+/* Typography */
+.text-gradient {
+  @apply bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent;
+}
+
+/* Chat message styles */
+.message-user {
+  @apply bg-primary-600 text-white rounded-lg px-4 py-2 ml-auto max-w-sm;
+}
+
+.message-assistant {
+  @apply bg-white border border-secondary-200 rounded-lg px-4 py-2 mr-auto max-w-2xl;
+}
+
+/* Progress bar */
+.progress-bar {
+  @apply w-full bg-secondary-200 rounded-full h-2;
+}
+
+.progress-fill {
+  @apply bg-primary-600 h-2 rounded-full transition-all duration-300;
+}
+
+/* Flashcard styles */
+.flashcard {
+  @apply bg-white border border-secondary-200 rounded-xl p-6 cursor-pointer transition-all duration-300 hover:shadow-lg;
+}
+
+.flashcard-front {
+  @apply text-center;
+}
+
+.flashcard-back {
+  @apply text-center transform rotate-y-180;
+}
+
+/* Quiz styles */
+.quiz-option {
+  @apply border border-secondary-300 rounded-lg p-3 cursor-pointer transition-colors duration-200 hover:bg-secondary-50;
+}
+
+.quiz-option-selected {
+  @apply border-primary-500 bg-primary-50;
+}
+
+.quiz-option-correct {
+  @apply border-success-500 bg-success-50;
+}
+
+.quiz-option-incorrect {
+  @apply border-error-500 bg-error-50;
+}
+
+/* Dashboard styles */
+.stat-card {
+  @apply bg-gradient-to-br from-white to-secondary-50 rounded-xl p-6 border border-secondary-200;
+}
+
+.metric-positive {
+  @apply text-success-600;
+}
+
+.metric-negative {
+  @apply text-error-600;
+}
+
+.metric-neutral {
+  @apply text-secondary-600;
+}
+
+/* Responsive grid */
+.grid-responsive {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+}
+
+/* File upload area */
+.upload-area {
+  @apply border-2 border-dashed border-secondary-300 rounded-lg p-8 text-center hover:border-primary-400 transition-colors duration-200 cursor-pointer;
+}
+
+.upload-area-active {
+  @apply border-primary-500 bg-primary-50;
+}
+
+/* Citation styles */
+.citation {
+  @apply inline-block bg-primary-100 text-primary-800 text-xs px-2 py-1 rounded-full cursor-pointer hover:bg-primary-200 transition-colors duration-200;
+}
+
+/* Streak indicator */
+.streak-fire {
+  @apply text-orange-500;
+}
+
+.streak-number {
+  @apply font-bold text-lg;
+}
